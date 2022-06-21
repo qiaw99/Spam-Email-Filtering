@@ -22,7 +22,7 @@ if __name__ == "__main__":
 
 
     bigram_vect = TfidfVectorizer(ngram_range=(1,1))
-    temp = bigram_vect.fit_transform(X)
+    temp = bigram_vect.fit_transform(new_words)
     new_X = temp.toarray()
 
     X_train, X_test, y_train, y_test = train_test_split(new_X, y, test_size=0.2, random_state=42)
